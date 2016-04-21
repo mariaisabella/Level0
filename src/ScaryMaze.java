@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -53,7 +54,11 @@ int background=-4020483;
 				// call the scare method
 
 		//10. if the mouse is on the end color
-				
+		int end=-22276;
+		if (mouseColor==end) {
+			JOptionPane.showMessageDialog(null, "Congrats! You have comepleted the Scary Mazy!");
+			
+		}
 				// pop up a message to tell them they won
 	}
 
@@ -64,7 +69,7 @@ int background=-4020483;
 		//8. play the scary sound. Hint: type "sound" and then a period.		
 		scream.play();
 		//9. drop an image into your default package, and use the showScaryImage method to scare your victim!
-
+showScaryImage("clown.jpg");
 	}
 
 	private void showScaryImage(String imageName) {
@@ -82,7 +87,7 @@ int background=-4020483;
 
 	@Override
 	public void run() {
-		JFrame frame = new JFrame("June's Scary Maze");
+		JFrame frame = new JFrame("Scary Maze");
 		frame.add(this);
 		setPreferredSize(new Dimension(frameWidth, frameHeight));
 		frame.pack();
