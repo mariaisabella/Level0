@@ -1,6 +1,8 @@
 int yDrop = 0;
 int x = (int)random(800);
 int score = 0;
+PImage bucket;
+PImage sky;
 void setup()
 {
   size(1000, 600);
@@ -28,7 +30,10 @@ void draw()
       score--;
     }
   }
-  rect(mouseX, 550, 50, 70);
+  //rect(mouseX, 550, 50, 70);
+ bucket = loadImage("imgres.png");
+ bucket.resize(50,75);
+ image(bucket, mouseX, 550);
   if (score >= 175)
   background(random(255),random(255),random(255));
 }
