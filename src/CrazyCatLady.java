@@ -14,7 +14,7 @@ if(catsNum>3){
 }
 
 		// 4. If they have 3 or less, call the method below to show them a cat video
-else if(catsNum<=3){
+else if(catsNum<=3>=1){
 	playVideo("https://www.youtube.com/watch?v=tntOCGkgt98");
 }
 
